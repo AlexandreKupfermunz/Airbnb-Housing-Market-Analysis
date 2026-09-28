@@ -1,8 +1,5 @@
 # Airbnb Housing Market Analysis — Database Project
 
-**Course:** Databases KEN2110 — Data Modelling
-**Team:** Manos Chaloftidis, Matteo Restivo, Alexandre Kupfermunz
-
 ## 1. Project overview
 
 This repository implements the relational database for our Airbnb housing
@@ -22,11 +19,18 @@ as a MySQL schema.
 ├── docs/
 │   ├── erd.pdf                   <- original ERD + normalization walkthrough
 │   └── normalization.md           <- written summary of the 1NF/2NF/3NF process
-└── sql/
+├── charts/
+    ├── q1_price_per_neighborhood.png
+    ├── q2_multi_home_hosts.png
+    ├── q3_price_rank_table.png
+    ├── q4_price_vs_rent_growth.png
+    └── q5_night_limit.png
+├── sql/
     ├── 01_schema.sql              <- DDL: tables, keys, constraints, indexes
     ├── 02_mock_data.sql           <- realistic sample data (INSERTs)
     ├── 03_crud_operations.sql     <- example Create / Read / Update / Delete statements
     └── 04_advanced_queries.sql    <- 5 advanced analytical queries
+└── chart_maker.py
 ```
 
 ## 3. Entity overview
@@ -114,12 +118,9 @@ scratch.
 - Commit messages describe *what* changed and *why* (e.g. "Add CHECK
   constraint to prevent negative nightly prices").
 
-## 7. Status
-
-- [x] GitHub repository set up
-- [x] ERD converted to relational schema
-- [x] Schema implemented with constraints and data types
-- [x] CRUD scripts written
-- [x] Mock data populated
-- [x] 5 advanced queries added
-- [ ] TA feedback pending
+## 7. Mock Data Disclaimer
+The mock data in `sql/02_mock_data.sql` was generated with the help of AI.
+Cities, neighborhoods, and general market patterns (rents, regulations,
+pricing ranges) were inspired by real-world context to make the data
+realistic, but the specific values, addresses, hosts, and listings are
+fictional and were not scraped or sourced from any real Airbnb dataset.
